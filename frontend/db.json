@@ -1,0 +1,18 @@
+{
+  "notes": [
+    {
+      "body": "hola\nuno\ndo\ntre",
+      "updated": "2023-07-19T01:45:44.743Z",
+      "id": 2
+    },
+    {
+      "body": "titulin\nEffects let you specify side effects that are caused by rendering itself, rather than by a particular event. Sending a message in the chat is an event because it is directly caused by the user clicking a specific button. However, setting up a server connection is an Effect because it should happen no matter which interaction caused the component to appear. Effects run at the end of a commit after the screen updates. This is a good time to synchronize the React components with some external system (like network or a third-party library).\n\n",
+      "updated": "2023-07-19T01:51:41.568Z",
+      "id": 4
+    },
+    {
+      "updated": "2023-07-19T01:55:12.024Z",
+      "id": 5
+    }
+  ]
+}
