@@ -1,11 +1,10 @@
-from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
 from .models import Note
 from .serializers import NoteSerializer
-from django.views.decorators.csrf import csrf_exempt
+from rest_framework import viewsets
+from rest_framework.decorators import authentication_classes
 
 
+"""
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
@@ -87,3 +86,13 @@ def deleteNote(request, pk):
     note = Note.objects.get(id=pk)
     note.delete()
     return Response('Note was deleted')
+"""
+
+
+@authentication_classes([])
+class NoteViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows notes to be viewed or edited.
+    """
+    queryset = Note.objects.all().order_by('-updated')
+    serializer_class = NoteSerializer

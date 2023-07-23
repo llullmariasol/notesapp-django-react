@@ -31,7 +31,7 @@ let getContent = (note) => {
 const ListItem = ({ note }) => {
   return (
     <div>
-      <Link to={`/note/${note.id}`}>
+      <Link to={`/notes/${note.id}`}>
         <div className="notes-list-item">
           <h3>{getTitle(note)}</h3>
           <p>
